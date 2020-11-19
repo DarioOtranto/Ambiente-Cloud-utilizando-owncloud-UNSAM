@@ -8,7 +8,7 @@ _El presente proyecto constituye el TP final de la materia ADMINISTRACION DE SIS
 $ mkdir owncloud-docker-server
 $ cd owncloud-docker-server
 ```
-## 2) Copiamos _docker-compose.yml_ del repo GitHub (owncloud):
+## 2) Copiamos el archivo _docker-compose.yml_ del repo GitHub del proyecto _owncloud_:
 ```
 $ wget https://raw.githubusercontent.com/owncloud/docs/master/modules/admin_manual/examples/installation/docker/docker-compose.yml
 ```
