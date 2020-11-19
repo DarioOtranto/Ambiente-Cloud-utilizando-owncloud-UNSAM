@@ -54,7 +54,7 @@ services:
       timeout: 10s
       retries: 5
     volumes:
-      - /home/negro-server/nube:/mnt/data **# aquí seteamos la carpeta donde queremos que se guarden los archivos**
+      - /home/negro-server/nube:/mnt/data  # aquí seteamos la carpeta donde queremos que se guarden los archivos
 
   db:
     image: webhippie/mariadb:latest
@@ -173,4 +173,11 @@ $ cat .env # para comprobar
 $ docker-compose up -d
 ```
 
+```diff
+- text in red
++ text in green
+! text in orange
+# text in gray
+@@ text in purple (and bold)@@
+```
 
