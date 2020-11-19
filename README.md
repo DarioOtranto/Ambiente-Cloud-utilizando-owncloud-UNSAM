@@ -18,7 +18,8 @@ $ wget https://raw.githubusercontent.com/owncloud/docs/master/modules/admin_manu
 version: '3' # aquí ponemos la versión más actualizada, por omisión es la 2.1
 
 volumes:
-#  files:
+# comentamos las dos primeras líneas para personalizar la conf.
+#  files:  
 #    driver: local
   mysql:
     driver: local
@@ -90,7 +91,7 @@ services:
 ```
 
 ## 4) Creamos el archivo de configuración del ambiente:
-```
+```ruby
 $ cat << EOF > .env
 OWNCLOUD_VERSION=10.5
 OWNCLOUD_DOMAIN=localhost:8080
@@ -154,7 +155,7 @@ $ docker-compose down
 _NOTA: Aunque todos los datos importantes persisten después docker-compose down; docker-compose up -d, hay ciertos detalles que se pierden, por ejemplo, las aplicaciones predeterminadas pueden volver a aparecer después de desinstalarlas._
 
 5) Editamos el archivo de configuración de entorno **.env** para cambiar el número de versión:
-```
+```ruby
 $ vim .env
 
 OWNCLOUD_VERSION=10.5
@@ -172,12 +173,13 @@ $ cat .env # para comprobar
 ```
 $ docker-compose up -d
 ```
+# Para más información visitar la web oficial del proyecto:
 
 ```diff
-- text in red
-+ text in green
-! text in orange
-# text in gray
-@@ text in purple (and bold)@@
+- https://doc.owncloud.com/server/admin_manual/installation/docker/
+
+! MUCHAS GRACIAS POR SU ATENCIÓN
+
+@@ UNSAM RULES @@
 ```
 
