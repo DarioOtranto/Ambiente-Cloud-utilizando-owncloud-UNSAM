@@ -8,7 +8,7 @@ _El presente proyecto constituye un TP final correspondiente a la materia ADMINI
 $ mkdir owncloud-docker-server
 $ cd owncloud-docker-server
 ```
-## 2) Copiamos docker-compose.yml del repo GitHub (owncloud):
+## 2) Copiamos _docker-compose.yml_ del repo GitHub (owncloud):
 ```
 $ wget https://raw.githubusercontent.com/owncloud/docs/master/modules/admin_manual/examples/installation/docker/docker-compose.yml
 ```
@@ -104,7 +104,7 @@ EOF
 $ docker-compose up -d
 ```
 
-Cuando se complete el proceso ejecutamos docker-compose ps y verificamos que todos los contenedores se hayan iniciado correctamente. Si todo funciona óptimo, deberíamos esperar lo siguiente:
+Cuando se complete el proceso ejecutamos docker-compose ps y verificamos que todos los contenedores se hayan iniciado correctamente. Si todo funciona óptimo deberíamos esperar lo siguiente:
 ```
 Name                          |   Command                   | State | Ports
 _______________________________   ___________________________ ______  ____________________
@@ -112,7 +112,7 @@ ownclouddockerserver_db_1         … /bin/s6-svscan /etc/s6    Up      3306/tcp
 ownclouddockerserver_owncloud_1   … /usr/bin/owncloud server  Up      0.0.0.0:8080->8080/tcp
 ownclouddockerserver_redis_1      … /bin/s6-svscan /etc/s6    Up      6379/tcp
 ```
-La base de datos, ownCloud y los contenedores de Redis se están ejecutando. Sólo se puede acceder a ownCloud a través del puerto 8080 en la máquina host.
+La base de datos, el ownCloud server y los contenedores de Redis se están ejecutando. Sólo se puede acceder a ownCloud a través del puerto 8080 en la máquina host.
 
 ## 6) Volúmenes
 
@@ -153,7 +153,7 @@ $ docker-compose down
 ```
 _NOTA: Aunque todos los datos importantes persisten después docker-compose down; docker-compose up -d, hay ciertos detalles que se pierden, por ejemplo, las aplicaciones predeterminadas pueden volver a aparecer después de desinstalarlas._
 
-5) Editamos el archivo de configuración de entorno .env para cambiar el número de versión:
+5) Editamos el archivo de configuración de entorno **.env** para cambiar el número de versión:
 ```
 $ vim .env
 
@@ -163,7 +163,7 @@ ADMIN_USERNAME="nuestro_usuario"
 ADMIN_PASSWORD="nuestro_pass"
 HTTP_PORT=8080
 ```
-_NOTA: dentro de la carpeta del proyecto podemos utilizar SED para automatizar el proceso con:_
+_NOTA: dentro de la carpeta del proyecto podemos utilizar **SED** para automatizar el proceso con:_
 ```
 $ sed -i 's/^OWNCLOUD_VERSION=.*$/OWNCLOUD_VERSION=<newVersion>/' /compose/*/.env
 $ cat .env # para comprobar
