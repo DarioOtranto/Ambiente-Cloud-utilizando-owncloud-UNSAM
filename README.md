@@ -12,7 +12,7 @@ $ cd owncloud-docker-server
 ```
 $ wget https://raw.githubusercontent.com/owncloud/docs/master/modules/admin_manual/examples/installation/docker/docker-compose.yml
 ```
-# 3) Editamos el archivo para personalizarlo un poco:
+## 3) Editamos el archivo para personalizarlo un poco:
 
 ```
 version: '3' **# aquí ponemos la versión más actualizada, por omisión es la 2.1**
