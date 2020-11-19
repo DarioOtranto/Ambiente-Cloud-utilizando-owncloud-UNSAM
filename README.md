@@ -178,8 +178,7 @@ $ docker-compose up -d
 https://doc.owncloud.com/server/admin_manual/installation/docker/
 
 ```diff
-
-¡ MUCHAS GRACIAS POR SU ATENCIÓN!
+- MUCHAS GRACIAS POR SU ATENCIÓN
 
 @@ UNSAM RULES @@
 ```
