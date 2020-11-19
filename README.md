@@ -90,7 +90,7 @@ services:
 ```
 
 ## 4) Creamos el archivo de configuración del ambiente:
-``
+```
 $ cat << EOF > .env
 OWNCLOUD_VERSION=10.5
 OWNCLOUD_DOMAIN=localhost:8080
