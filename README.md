@@ -106,8 +106,8 @@ $ docker-compose up -d
 
 Cuando se complete el proceso ejecutamos docker-compose ps y verificamos que todos los contenedores se hayan iniciado correctamente. Si todo funciona óptimo, deberíamos esperar lo siguiente:
 ```
-Name                              Command                     State   Ports
-__________________________________________________________________________________________
+Name                          |   Command                   | State | Ports
+_______________________________   ___________________________ ______  ____________________
 ownclouddockerserver_db_1         … /bin/s6-svscan /etc/s6    Up      3306/tcp
 ownclouddockerserver_owncloud_1   … /usr/bin/owncloud server  Up      0.0.0.0:8080->8080/tcp
 ownclouddockerserver_redis_1      … /bin/s6-svscan /etc/s6    Up      6379/tcp
