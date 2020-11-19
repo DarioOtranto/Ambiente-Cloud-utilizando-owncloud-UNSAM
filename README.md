@@ -13,7 +13,7 @@ $ cd owncloud-docker-server
 $ wget https://raw.githubusercontent.com/owncloud/docs/master/modules/admin_manual/examples/installation/docker/docker-compose.yml
 ```
 # 3) Editamos el archivo para personalizarlo un poco:
-`
+``
 version: '3' **# aquí ponemos la versión más actualizada, por omisión es la 2.1**
 
 volumes:
@@ -86,7 +86,7 @@ services:
       retries: 5
     volumes:
       - redis:/var/lib/redis
-``
+```
 # Creamos el archivo de configuración del ambiente:
 cat << EOF > .env
 OWNCLOUD_VERSION=10.5
