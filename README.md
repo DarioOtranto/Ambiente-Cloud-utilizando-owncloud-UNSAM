@@ -165,7 +165,7 @@ ADMIN_PASSWORD="nuestro_pass"
 HTTP_PORT=8080
 ```
 _NOTA: dentro de la carpeta del proyecto podemos utilizar **SED** para automatizar el proceso con:_
-```
+```diff
 $ sed -i 's/^OWNCLOUD_VERSION=.*$/OWNCLOUD_VERSION=<newVersion>/' /compose/*/.env
 $ cat .env # para comprobar
 ```
@@ -176,10 +176,10 @@ $ docker-compose up -d
 # Para más información visitar la web oficial del proyecto:
 
 ```diff
-- https://doc.owncloud.com/server/admin_manual/installation/docker/
+-https://doc.owncloud.com/server/admin_manual/installation/docker/
 
-! MUCHAS GRACIAS POR SU ATENCIÓN
+!MUCHAS GRACIAS POR SU ATENCIÓN
 
-@@ UNSAM RULES @@
+@@UNSAM RULES@@
 ```
 
