@@ -175,11 +175,12 @@ $ docker-compose up -d
 ```
 # Para más información visitar la web oficial del proyecto:
 
-```diff
 https://doc.owncloud.com/server/admin_manual/installation/docker/
 
-MUCHAS GRACIAS POR SU ATENCIÓN
+```diff
 
-NSAM RULES
+¡MUCHAS GRACIAS POR SU ATENCIÓN!
+
+@@ UNSAM RULES @@
 ```
 
