@@ -90,15 +90,15 @@ services:
 ```
 
 ## 4) Creamos el archivo de configuración del ambiente:
-
-cat << EOF > .env
+``
+$ cat << EOF > .env
 OWNCLOUD_VERSION=10.5
 OWNCLOUD_DOMAIN=localhost:8080
 ADMIN_USERNAME="nuestro_usuario"
 ADMIN_PASSWORD="nuestro_pass"
 HTTP_PORT=8080
 EOF
-
+```
 ## 5) Levantamos el container:
 ```
 $ docker-compose up -d
