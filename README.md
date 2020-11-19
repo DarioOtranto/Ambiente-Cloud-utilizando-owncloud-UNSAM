@@ -14,7 +14,7 @@ $ wget https://raw.githubusercontent.com/owncloud/docs/master/modules/admin_manu
 ```
 ## 3) Editamos el archivo para personalizarlo un poco:
 
-```
+```ruby
 version: '3' # aquí ponemos la versión más actualizada, por omisión es la 2.1
 
 volumes:
