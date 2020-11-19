@@ -1,6 +1,6 @@
-# Ambiente-Cloud-utilizando-owncloud-UNSAM
+# Ambiente-Cloud-utilizando-ownCloud-UNSAM
 
-_El presente proyecto constituye el TP final de la materia ADMINISTRACION DE SISTEMAS GNU/LINUX Y VIRTUALIZACION-C-ELE78, UNSAM, segundo cuatrimestre del peor año de la historia, el 2020. El mismo consiste en la instalación y configuración de un container de docker-compose correspondiente a la creación de un ambiente Cloud con owncloud._
+_El presente proyecto constituye el TP final de la materia ADMINISTRACION DE SISTEMAS GNU/LINUX Y VIRTUALIZACION-C-ELE78, UNSAM, segundo cuatrimestre del peor año de la historia, el 2020. El mismo consiste en la instalación y configuración de un container de docker-compose correspondiente a la creación de un ambiente Cloud con ownCloud._
 
 ## 1) Creamos directorio del proyecto:
 
@@ -8,7 +8,7 @@ _El presente proyecto constituye el TP final de la materia ADMINISTRACION DE SIS
 $ mkdir owncloud-docker-server
 $ cd owncloud-docker-server
 ```
-## 2) Copiamos el archivo _docker-compose.yml_ del repo GitHub del proyecto _owncloud_:
+## 2) Copiamos el archivo _docker-compose.yml_ del repo GitHub del proyecto _ownCloud_:
 ```
 $ wget https://raw.githubusercontent.com/owncloud/docs/master/modules/admin_manual/examples/installation/docker/docker-compose.yml
 ```
