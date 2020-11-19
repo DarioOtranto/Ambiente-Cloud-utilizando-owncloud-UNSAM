@@ -132,8 +132,10 @@ local               owncloud-docker-server_redis
 
 En cualquier navegador tipeamos http://localhost:8080 y accedemos a la pantalla de inicio de sesión de ownCloud.
 
+**Pantalla de login**
 ![My image](https://github.com/DarioOtranto/Ambiente-Cloud-utilizando-owncloud-UNSAM/blob/main/owncloud-ui-login.png "Pantalla de login")
 
+**Demo del flujo de trabajo**
 [![](http://img.youtube.com/vi/l0oa_YtVLOc/0.jpg)](http://www.youtube.com/watch?v=l0oa_YtVLOc "Demo del flujo de trabajo")
 
 # Actualización de ownCloud en Docker:
