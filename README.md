@@ -130,7 +130,13 @@ local               owncloud-docker-server_redis
 ```
 ## 7) Iniciamos sesión:
 
-En cualquier navegador tipeamos http://localhost:8080 y accedemos a la pantalla de inicio de sesión de ownCloud.
+**En el Server ownCloud:**
+
+En cualquier navegador tipeamos **http://localhost:8080** y accedemos a la pantalla de inicio de sesión de ownCloud.
+
+**En cualquier cliente:**
+
+En cualquier navegador tipeamos **http://<IP_ADDRESS>:8080/login** y accedemos a la pantalla de inicio de sesión de ownCloud.
 
 **Pantalla de login**
 
