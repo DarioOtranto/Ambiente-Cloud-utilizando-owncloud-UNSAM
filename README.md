@@ -8,13 +8,13 @@ _El presente proyecto constituye un TP final correspondiente a la materia ADMINI
 $ mkdir owncloud-docker-server
 $ cd owncloud-docker-server
 ```
-# 2) Copiamos docker-compose.yml del repo GitHub (owncloud):
+## 2) Copiamos docker-compose.yml del repo GitHub (owncloud):
 ```
 $ wget https://raw.githubusercontent.com/owncloud/docs/master/modules/admin_manual/examples/installation/docker/docker-compose.yml
 ```
 # 3) Editamos el archivo para personalizarlo un poco:
-
-**version: '3'** # aquí ponemos la versión más actualizada, por omisión es la 2.1
+`
+version: '3' **# aquí ponemos la versión más actualizada, por omisión es la 2.1**
 
 volumes:
 #  files:
@@ -86,7 +86,7 @@ services:
       retries: 5
     volumes:
       - redis:/var/lib/redis
-
+``
 # Creamos el archivo de configuración del ambiente:
 cat << EOF > .env
 OWNCLOUD_VERSION=10.5
