@@ -54,7 +54,7 @@ services:
       timeout: 10s
       retries: 5
     volumes:
-      - /home/negro-server/nube:/mnt/data # aquí seteamos la carpeta donde queremos que se guarden los archivos
+      - /home/negro-server/nube:/mnt/data **# aquí seteamos la carpeta donde queremos que se guarden los archivos**
 
   db:
     image: webhippie/mariadb:latest
@@ -99,53 +99,60 @@ ADMIN_PASSWORD="nuestro_pass"
 HTTP_PORT=8080
 EOF
 
-# Levantamos el container:
-
+## 5) Levantamos el container:
+```
 $ docker-compose up -d
+```
 
 Cuando se complete el proceso ejecutamos docker-compose ps y verificamos que todos los contenedores se hayan iniciado correctamente. Si todo funciona óptimo, deberíamos esperar lo siguiente:
-
+```
 Name                              Command                     State   Ports
 __________________________________________________________________________________________
 ownclouddockerserver_db_1         … /bin/s6-svscan /etc/s6    Up      3306/tcp
 ownclouddockerserver_owncloud_1   … /usr/bin/owncloud server  Up      0.0.0.0:8080->8080/tcp
 ownclouddockerserver_redis_1      … /bin/s6-svscan /etc/s6    Up      6379/tcp
-
+```
 La base de datos, ownCloud y los contenedores de Redis se están ejecutando. Sólo se puede acceder a ownCloud a través del puerto 8080 en la máquina host.
 
-# Volúmenes
+## 6) Volúmenes
 
 Todos los archivos almacenados en esta configuración están contenidos en volúmenes Docker, en lugar de un árbol del sistema de archivos físico. Para verlos ejecutamos:
-
+```
 $ docker volume ls | grep owncloud-docker-server
-
+```
+Veremos algo como:
+```
 DRIVER              VOLUME NAME
 local               owncloud-docker-server_backup
 local               owncloud-docker-server_mysql
 local               owncloud-docker-server_redis
+```
+## 7) Iniciamos sesión:
+
+En cualquier navegador tipeamos http://localhost:8080 y accedemos a la pantalla de inicio de sesión de ownCloud.
 
 # Actualización de ownCloud en Docker:
 
 1) Vamos al directorio del proyecto:
-
+```
 $ ~/owncloud-docker-server 
-
+```
 2) Ponemos ownCloud en modo de mantenimiento:
-
+```
 $ docker-compose exec owncloud occ maintenance:mode --on
-
+```
 3) Creamos una copia de seguridad en caso de que algo salga mal durante el proceso de actualización:
-
+```
 $ docker-compose exec db backup
-
+```
 4) Cerramos los contenedores:
-
+```
 $ docker-compose down
-
-NOTA: Aunque todos los datos importantes persisten después docker-compose down; docker-compose up -d, hay ciertos detalles que se pierden, por ejemplo, las aplicaciones predeterminadas pueden volver a aparecer después de desinstalarlas.
+```
+_NOTA: Aunque todos los datos importantes persisten después docker-compose down; docker-compose up -d, hay ciertos detalles que se pierden, por ejemplo, las aplicaciones predeterminadas pueden volver a aparecer después de desinstalarlas._
 
 5) Editamos el archivo de configuración de entorno .env para cambiar el número de versión:
-
+```
 $ vim .env
 
 OWNCLOUD_VERSION=10.5
@@ -153,17 +160,15 @@ OWNCLOUD_DOMAIN=localhost:8080
 ADMIN_USERNAME="nuestro_usuario"
 ADMIN_PASSWORD="nuestro_pass"
 HTTP_PORT=8080
-
-NOTA: dentro de la carpeta del proyecto podemos utilizar SED para automatizar el proceso con: 
-
+```
+_NOTA: dentro de la carpeta del proyecto podemos utilizar SED para automatizar el proceso con:_
+```
 $ sed -i 's/^OWNCLOUD_VERSION=.*$/OWNCLOUD_VERSION=<newVersion>/' /compose/*/.env
 $ cat .env # para comprobar
-
+```
 6) Levantamos el container: 
-
+```
 $ docker-compose up -d
+```
 
-# Iniciamos sesión
-
-En cualquier navegador tipeamos http://localhost:8080 y accedemos a la pantalla de inicio de sesión de ownCloud.
 
