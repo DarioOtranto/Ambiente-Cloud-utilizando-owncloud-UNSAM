@@ -173,7 +173,7 @@ $ cat .env # para comprobar
 ```
 $ docker-compose up -d
 ```
-# Para más información visitar la web oficial del proyecto:
+# Para más información, visitar la web oficial del proyecto:
 
 https://doc.owncloud.com/server/admin_manual/installation/docker/
 
